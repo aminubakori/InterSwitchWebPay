@@ -176,8 +176,10 @@
 						<input type="submit" class="button alt" id="submit_webpay_payment_form" value="Pay via Interswitch Webpay" />
 					</div>
 					<script type="text/javascript">
-						jQuery("#submit_webpay_payment_form").click();
-						jQuery(".payment_buttons").hide();
+						$("document").ready(function () {
+							$("#submit_webpay_payment_form").click();
+							$(".payment_buttons").hide();
+						});
 					</script>
 				</form>';
 		}
@@ -191,7 +193,7 @@
 		 * @param string $customer_lname Customer Last Name
 	    **/
 		public function make_webpay_payment($redirect_url, $order_id, $order_total, $customer_fname, $customer_lname) {
-			echo '<p> Thank you - your order is now pending payment. You should be automatically redirected to Interswitch to make payment.</p>';
+			echo '<p> Thank you - your order is now pending payment. Click the button below and you should be automatically redirected to Interswitch to make payment.</p>';
 			echo $this->generate_webpay_form($redirect_url, $order_id, $order_total, $customer_fname, $customer_lname);
 		}	
 		

@@ -4,12 +4,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 		<title>Test Invoice</title>
 	</head>	
 	
 	<body>
 		<h1>Invoice Preview Page - <?php echo $order_id; ?></h1>	
-		<table border="1">
+		<table border="1" class="table">
 			<thead>
 				<th>S/N</th>
 				<th>Item</th>
@@ -52,9 +53,12 @@
 					<td> </td>
 					<td> </td>
 					<td> </td>
-					<td><a href="process.php?order_id=<?php echo $order_id; ?>"><button>Pay with InterSwitch</button></a></td>
+					<td><a href="process.php?order_id=<?php echo $order_id; ?>"><button class="btn">Pay with InterSwitch</button></a></td>
 				</tr>
 			</tbody>
 		</table>
+		
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</body>
 </html>

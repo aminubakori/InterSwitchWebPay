@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 		<title>Test Invoice</title>
 	</head>	
 	
 	<body>	
 		<?php
-			require 'InterSwitchPayment.php';
+			require 'InterSwitchWebPay.php';
 			
 			$product_id = '4220';
 			$pay_item_id = '101';
@@ -21,7 +22,7 @@
 				$order_total = '160000';
 				$customer_fname = 'Aminu';
 				$customer_lname = 'Bakori';
-				$redirect_url = 'http://localhost:8888/InterSwitchPayment/process.php?order_no='.$_GET['order_id'];
+				$redirect_url = 'http://localhost:8888/InterSwitchWebPay/process.php?order_no='.$_GET['order_id'];
 				$InterSwitch->make_webpay_payment($redirect_url, $order_id, $order_total, $customer_fname, $customer_lname);
 			}elseif(isset($_GET['order_no'])) {
 				echo "<h1>Payment Check</h1>";
@@ -32,5 +33,8 @@
 				var_dump($response);
 			}
 		?>
+		
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</body>
 </html>
