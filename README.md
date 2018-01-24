@@ -1,3 +1,12 @@
+## Notice
+This library is no longer supported.
+
+You can instead try out Payant at https://payant.ng.
+
+Developer documentation at https://developers.payant.ng and libraries can be found at https://developers.payant.ng/overview/libraries.
+
+The PHP library is https://github.com/JonathanItakpe/payantNG-php.
+
 ## InterSwitchWebPay
 A PHP implementation of InterSwitch WebPay API
 
